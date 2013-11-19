@@ -1,4 +1,4 @@
-require_relative "library.rb"
+require_relative "library2.rb"
 
 puts "create our library"
 library = Library.new

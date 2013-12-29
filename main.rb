@@ -1,14 +1,4 @@
-require_relative "library2.rb"
-
-puts "create our library"
-library = Library.new
-puts "-------------------------"
-
-puts "create our borrowers"
-mike = Borrower.new("Mike")
-ricardo = Borrower.new("Ricardo")
-gilbert = Borrower.new("Gilbert")
-puts "-------------------------"
+require_relative "library.rb"
 
 puts "create our books"
 stranger = Book.new("The Stranger", "Albert Camus")
@@ -17,6 +7,16 @@ karamazov = Book.new("The Brothers Karamazov", "Fyodor Dostoesvky")
 feynman = Book.new("Surely You're Joking Mr. Feynman", "Richard Feynman")
 finnegan = Book.new("Finnegans Wake", "James Joyce")
 k_and_r = Book.new("The C Programming Language", "Kernighan and Ritchie")
+puts "-------------------------"
+
+puts "create our borrowers"
+mike = Borrower.new("Mike")
+ricardo = Borrower.new("Ricardo")
+gilbert = Borrower.new("Gilbert")
+puts "-------------------------"
+
+puts "create our library"
+library = Library.new
 puts "-------------------------"
 
 puts "add our books to the library"
@@ -28,7 +28,7 @@ library.add_book(finnegan)
 library.add_book(k_and_r)
 puts "-------------------------"
 
-puts "list all five books in the library's catalog with their status:"
+puts "list all six books in the library's catalog with their status:"
 library.list_books
 puts "-------------------------"
 
@@ -42,7 +42,7 @@ library.check_out(gilbert, karamazov)
 library.check_out(gilbert, feynman)
 puts "-------------------------"
 
-puts "list all five books in the library's catalog with their statuses:"
+puts "list all six books in the library's catalog with their statuses:"
 library.list_books
 puts "-------------------------"
 
@@ -78,5 +78,3 @@ puts "-------------------------"
 puts "this should only show the available books"
 library.available_books
 puts "-------------------------"
-
-
